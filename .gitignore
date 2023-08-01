@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NpgsqlPoc/.vs
+/.vs
+/NpgsqlPoc/NpgsqlPoc/bin
+/NpgsqlPoc/NpgsqlPoc/obj
+/NpgsqlPoc/obj/Docker

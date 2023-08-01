@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  npgsqlpoc:
+    image: ${DOCKER_REGISTRY-}npgsqlpoc
+    build:
+      context: .
+      dockerfile: NpgsqlPoc/Dockerfile
