@@ -13,7 +13,7 @@ namespace NpgsqlPoc.Database
         {
             _connection = new NpgsqlConnection(
             //connectionString: "Server=localhost;Port=5432;User Id=postgres;Password=root;Database=postgres;");
-            connectionString: "Server=pruebita-db-1;Port=5432;User Id=qpr;Password=example;Database=qpr_db;");
+            connectionString: "Server=npgsqlpoc-db-1;Port=5432;User Id=qpr;Password=example;Database=qpr_db;");
         }
         public async Task<int> CreateOrUpdateDto(ExampleDto exampleDto)
         {
