@@ -50,5 +50,12 @@ namespace NpgsqlPoc.Controllers
             return Ok(await _command.GetDtos());
         }
 
+        [HttpGet]
+        [Route("/CreateTableExampleJson")]
+        public async Task<IActionResult> CreateExampleJsonTable() 
+        {
+            return Ok(await _command.CreateExampleJsonTable());
+        }
+
     }
 }
