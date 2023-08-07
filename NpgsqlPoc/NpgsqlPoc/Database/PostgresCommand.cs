@@ -12,7 +12,6 @@ namespace NpgsqlPoc.Database
         public PostgresCommand()
         {
             _connection = new NpgsqlConnection(
-            //connectionString: "Server=localhost;Port=5432;User Id=qpr;Password=example;Database=qpr_db;");
             connectionString: "Server=npgsqlpoc-db-1;Port=5432;User Id=qpr;Password=example;Database=qpr_db;");
 
         }
@@ -69,7 +68,7 @@ namespace NpgsqlPoc.Database
             return result;
         }
 
-        public async Task<bool> CreateExampleJsonTable() 
+        public async Task<bool> CreateExampleJsonTable()
         {
             bool ok = true;
             try
@@ -80,23 +79,23 @@ namespace NpgsqlPoc.Database
                 cmd.CommandText = $"CREATE TABLE public.examplejson (id SERIAL PRIMARY KEY,json jsonb NULL);";
                 await cmd.ExecuteNonQueryAsync();
             }
-            catch (Exception) 
+            catch (Exception)
             {
                 ok = false;
             }
-            
+
             return ok;
         }
 
-        public bool CanConnectToDocker() 
+        public bool CanConnectToDocker()
         {
-            try {
-                var connection = new NpgsqlConnection(
-                connectionString: "Server=localhost;Port=5432;User Id=qpr;Password=example;Database=qpr_db;");
-                connection.Open();
+            try
+            {
+                _connection.Open();
                 return true;
             }
-            catch { 
+            catch
+            {
                 return false;
             }
         }
